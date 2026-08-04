@@ -1,22 +1,25 @@
 <div align="center">
 
-<h1>Chethin Weerakkody</h1>
+<img src="https://ghrb.waren.build/banner?header=Chethin+Weerakkody&bg=00000000&color=ffffff&headerfont=Orbitron" alt="Chethin Weerakkody" height="70" />
 
 <h4>🚀 Co-founder @ PaperSetter &nbsp;·&nbsp; 🎓 First-Class Honours @ ANU</h4>
 
-<br>
-
-<a href="https://chethin.me"><img src="https://api.iconify.design/mdi/web.svg?color=%2358a6ff" height="30" alt="Website" /></a>
-&nbsp;&nbsp;
-<a href="https://linkedin.com/in/chethin"><img src="https://api.iconify.design/mdi/linkedin.svg?color=%230a66c2" height="30" alt="LinkedIn" /></a>
-&nbsp;&nbsp;
-<a href="mailto:hello@chethin.me"><img src="https://api.iconify.design/mdi/email.svg?color=%23ea4335" height="30" alt="Email" /></a>
+<p style="margin: 0;">
+<a href="https://chethin.me"><img src="https://api.iconify.design/lucide/globe.svg?color=%23ffffff" height="30" alt="Website" /></a>
+<a href="https://linkedin.com/in/chethin"><img src="https://api.iconify.design/lucide/linkedin.svg?color=%23ffffff" height="30" alt="LinkedIn" /></a>
+<a href="mailto:hello@chethin.me"><img src="https://api.iconify.design/lucide/mail.svg?color=%23ffffff" height="30" alt="Email" /></a>
+</p>
 
 </div>
 
----
-
-> **Co-founder @ [PaperSetter](https://chethin.me)** — an end-to-end AI exam engine for automated test generation, pixel-perfect PDF rendering, and real-time exam delivery. First-Class Honours @ **ANU** (Compilers & Systems), obsessed with efficiency, raw performance, and 3D experiences.
+- 🚀 **Co-founder @ [PaperSetter](https://papersetter.io)** — an end-to-end AI exam engine for test generation, pixel-perfect PDF rendering & real-time exam delivery
+- 🎓 **First-Class Honours @ ANU** — specialising in Compilers & Systems
+- ⚡ Obsessed with efficiency, raw performance & 3D experiences
+- 🌱 **Learning** — WebGPU, shaders, Rust, systems programming
+- ⚙️ **Ask me about** — CPU microarchitecture
+- 🛠️ **Building** — a customisable online exam taker
+- 🤝 **Open to** — collaborating on cool ideas we can bootstrap
+- ⌨️ **Fun fact** — I daily-drive a Colemak split keyboard
 
 ---
 
@@ -41,7 +44,7 @@
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Chethin&show_icons=true&hide_border=true&count_private=true&theme=dark&bg_color=0D1117" />
-  <img alt="github stats" height="165" src="https://github-readme-stats.vercel.app/api?username=Chethin&show_icons=true&hide_border=true&count_private=true&theme=transparent" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Chethin&show_icons=true&hide_border=true&count_private=true&theme=transparent" />
 </picture>
 
 <br>
