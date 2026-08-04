@@ -10,7 +10,7 @@
 
 </div>
 
-- 🚀 **Co-founder @ [PaperSetter](https://papersetter.io)** — an end-to-end AI exam engine for test generation, pixel-perfect PDF rendering & real-time exam delivery
+- 🚀 **Co-founder @ [PaperSetter](https://papersetter.io)** — an end-to-end AI exam engine for generating & delivering exams
 - 🎓 **First-Class Honours @ ANU** — specialising in Compilers & Systems
 - ⚡ Obsessed with efficiency, raw performance & 3D experiences
 - 🌱 **Learning** — WebGPU, shaders, Rust, systems programming
