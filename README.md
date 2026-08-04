@@ -54,9 +54,11 @@
 ---
 
 <p style="margin: 0;">
-<a href="https://chethin.me"><img src="https://api.iconify.design/lucide/globe.svg?color=%23ffffff" height="30" alt="Website" /></a>
-<a href="https://linkedin.com/in/chethin"><img src="https://api.iconify.design/lucide/linkedin.svg?color=%23ffffff" height="30" alt="LinkedIn" /></a>
-<a href="mailto:hello@chethin.me"><img src="https://api.iconify.design/lucide/mail.svg?color=%23ffffff" height="30" alt="Email" /></a>
+<a href="https://chethin.me"><img src="https://api.iconify.design/lucide/globe.svg?color=%23ffffff" height="40" alt="Website" /></a>
+&nbsp;&nbsp;&nbsp;
+<a href="https://linkedin.com/in/chethin"><img src="https://api.iconify.design/lucide/linkedin.svg?color=%23ffffff" height="40" alt="LinkedIn" /></a>
+&nbsp;&nbsp;&nbsp;
+<a href="mailto:hello@chethin.me"><img src="https://api.iconify.design/lucide/mail.svg?color=%23ffffff" height="40" alt="Email" /></a>
 </p>
 
 </div>
