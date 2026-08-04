@@ -1,16 +1,16 @@
 <div align="center">
 
-<a href="https://chethin.me">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=30&duration=4000&pause=1500&color=58A6FF&center=true&vCenter=true&random=false&width=560&lines=Chethin+Weerakkody" alt="Chethin Weerakkody" width="100%" />
-</a>
+<h1>Chethin Weerakkody</h1>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=2500&pause=1200&color=8B949E&center=true&vCenter=true&random=false&width=480&lines=Co-founder+%40+PaperSetter;First-Class+Honours+%40+ANU;Compilers+%E2%80%A2+Systems+%E2%80%A2+3D+%E2%80%A2+Performance" alt="tagline" />
+<h4>🚀 Co-founder @ PaperSetter &nbsp;·&nbsp; 🎓 First-Class Honours @ ANU</h4>
 
 <br>
 
-<a href="https://chethin.me"><img src="https://img.shields.io/badge/chethin.me-58A6FF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="website" /></a>
-<a href="https://linkedin.com/in/chethin"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin" /></a>
-<a href="mailto:hello@chethin.me"><img src="https://img.shields.io/badge/hello@chethin.me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="email" /></a>
+<a href="https://chethin.me"><img src="https://cdn.simpleicons.org/googlechrome/58A6FF" height="30" alt="Website" /></a>
+&nbsp;&nbsp;
+<a href="https://linkedin.com/in/chethin"><img src="https://cdn.simpleicons.org/linkedin/0A66C2" height="30" alt="LinkedIn" /></a>
+&nbsp;&nbsp;
+<a href="mailto:hello@chethin.me"><img src="https://cdn.simpleicons.org/gmail/EA4335" height="30" alt="Email" /></a>
 
 </div>
 
@@ -55,12 +55,6 @@
 
 **where I build**
 
-<img src="https://skillicons.dev/icons?i=arch,macos,neovim,raspberrypi&perline=8" alt="setup" />
-
-<br>
-
-<a href="https://chethin.me"><img src="https://img.shields.io/badge/chethin.me-58A6FF?style=flat-square&logo=googlechrome&logoColor=white" /></a>
-<a href="https://linkedin.com/in/chethin"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
-<a href="mailto:hello@chethin.me"><img src="https://img.shields.io/badge/hello@chethin.me-EA4335?style=flat-square&logo=gmail&logoColor=white" /></a>
+<img src="https://skillicons.dev/icons?i=arch,apple,neovim,raspberrypi&perline=8" alt="setup" />
 
 </div>
