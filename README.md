@@ -2,19 +2,13 @@
 
 # Chethin Weerakkody
 
-**Software Engineer** at [papersetter.io](https://papersetter.io)
-
-*low-level by training · real-time graphics by curiosity*
-
 </div>
 
 ---
 
-- 🏗️ Real-time collab + multi-region infra for an AI exam platform
-- ⚡ Cut a Lucene search engine's latency by 25% with caching
-- 🦀 Incremental LR parser with error correction, written in Rust
-- 🌐 Rendering my portfolio as a 3D world — Three.js + WebGPU
-- 🎓 First-Class Honours, ANU — compilers & systems
+- Co-founder @ PaperSetter — end-to-end AI exam engine: automated test generation, pixel-perfect PDF rendering, and real-time exam delivery.
+- First-Class Honours @ ANU (Compilers & Systems).
+- Obsessed with efficiency, performance, and 3D experiences.
 
 ---
 
@@ -41,15 +35,19 @@
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Chethin&show_icons=true&hide_border=true&count_private=true&theme=dark&bg_color=0D1117" />
   <img alt="github stats" height="165" src="https://github-readme-stats.vercel.app/api?username=Chethin&show_icons=true&hide_border=true&count_private=true&theme=transparent" />
 </picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Chethin&layout=compact&hide_border=true&theme=dark&bg_color=0D1117&langs_count=6&exclude=html,css" />
-  <img alt="top languages" height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Chethin&layout=compact&hide_border=true&theme=transparent&langs_count=6&exclude=html,css" />
-</picture>
 
 <br>
 <br>
 
-<img src="https://skillicons.dev/icons?i=rust,ts,threejs,react,nextjs,c,python,go&perline=8" alt="skills" />
+**what I build with**
+
+<img src="https://skillicons.dev/icons?i=ts,react,nextjs,threejs,vite,python,java&perline=8" alt="stack" />
+
+<br>
+
+**where I build**
+
+<img src="https://skillicons.dev/icons?i=arch,macos,neovim,raspberrypi&perline=8" alt="setup" />
 
 <br>
 <br>
