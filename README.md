@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://ghrb.waren.build/banner?header=Chethin+Weerakkody&bg=00000000&color=ffffff&headerfont=Orbitron" alt="Chethin Weerakkody" width="295" height="70" />
+<img src="assets/name.svg" alt="Chethin Weerakkody" height="70" />
 
 </div>
 
