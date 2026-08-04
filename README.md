@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/name.svg" alt="Chethin Weerakkody" height="70" />
+<img src="assets/name.png" width="634" height="70" alt="Chethin Weerakkody" />
 
 </div>
 
@@ -44,6 +44,7 @@
 
 <img src="https://skillicons.dev/icons?i=arch,apple,neovim,raspberrypi&perline=8" alt="setup" />
 
+<br>
 <br>
 
 <p style="margin: 0;">
