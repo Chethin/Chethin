@@ -2,19 +2,12 @@
 
 <img src="https://ghrb.waren.build/banner?header=Chethin+Weerakkody&bg=00000000&color=ffffff&headerfont=Orbitron" alt="Chethin Weerakkody" width="295" height="70" />
 
-<p style="margin: 0;">
-<a href="https://chethin.me"><img src="https://api.iconify.design/lucide/globe.svg?color=%23ffffff" height="30" alt="Website" /></a>
-<a href="https://linkedin.com/in/chethin"><img src="https://api.iconify.design/lucide/linkedin.svg?color=%23ffffff" height="30" alt="LinkedIn" /></a>
-<a href="mailto:hello@chethin.me"><img src="https://api.iconify.design/lucide/mail.svg?color=%23ffffff" height="30" alt="Email" /></a>
-</p>
-
 </div>
 
 - 🚀 **Co-founder @ [PaperSetter](https://papersetter.io)** — an end-to-end AI exam engine for generating & delivering exams
 - 🎓 **First-Class Honours @ ANU** — specialising in Compilers & Systems
 - ⚡ Obsessed with efficiency, raw performance & 3D experiences
-- 🌱 **Learning** — WebGPU, shaders, Rust, systems programming
-- ⚙️ **Ask me about** — CPU microarchitecture
+- 🌱 **Learning** — WebGPU, shaders, SwiftUI, Three.js
 - 🛠️ **Building** — a customisable online exam taker
 - 🤝 **Open to** — collaborating on cool ideas we can bootstrap
 - ⌨️ **Fun fact** — I daily-drive a Colemak split keyboard
@@ -50,5 +43,13 @@
 **where I build**
 
 <img src="https://skillicons.dev/icons?i=arch,apple,neovim,raspberrypi&perline=8" alt="setup" />
+
+<br>
+
+<p style="margin: 0;">
+<a href="https://chethin.me"><img src="https://api.iconify.design/lucide/globe.svg?color=%23ffffff" height="30" alt="Website" /></a>
+<a href="https://linkedin.com/in/chethin"><img src="https://api.iconify.design/lucide/linkedin.svg?color=%23ffffff" height="30" alt="LinkedIn" /></a>
+<a href="mailto:hello@chethin.me"><img src="https://api.iconify.design/lucide/mail.svg?color=%23ffffff" height="30" alt="Email" /></a>
+</p>
 
 </div>
