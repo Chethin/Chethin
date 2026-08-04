@@ -2,7 +2,11 @@
 
 <img src="assets/name.png" width="634" height="70" alt="Chethin Weerakkody" />
 
+<br>
+
 </div>
+
+---
 
 - 🚀 **Co-founder @ [PaperSetter](https://papersetter.io)** — an end-to-end AI exam engine for generating & delivering exams
 - 🎓 **First-Class Honours @ ANU** — specialising in Compilers & Systems
@@ -46,6 +50,8 @@
 
 <br>
 <br>
+
+---
 
 <p style="margin: 0;">
 <a href="https://chethin.me"><img src="https://api.iconify.design/lucide/globe.svg?color=%23ffffff" height="30" alt="Website" /></a>
