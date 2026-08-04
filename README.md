@@ -1,8 +1,6 @@
 <div align="center">
 
-<img src="https://ghrb.waren.build/banner?header=Chethin+Weerakkody&bg=00000000&color=ffffff&headerfont=Orbitron" alt="Chethin Weerakkody" height="70" />
-
-<h4>🚀 Co-founder @ PaperSetter &nbsp;·&nbsp; 🎓 First-Class Honours @ ANU</h4>
+<img src="https://ghrb.waren.build/banner?header=Chethin+Weerakkody&bg=00000000&color=ffffff&headerfont=Orbitron" alt="Chethin Weerakkody" width="295" height="70" />
 
 <p style="margin: 0;">
 <a href="https://chethin.me"><img src="https://api.iconify.design/lucide/globe.svg?color=%23ffffff" height="30" alt="Website" /></a>
@@ -39,13 +37,6 @@
   <img alt="github streak" height="170" src="https://streak-stats.demolab.com?user=Chethin&hide_border=true&background=00000000&ring=0969DA&fire=F18537&currStreakLabel=0969DA" />
 </picture>
 </a>
-
-<br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Chethin&show_icons=true&hide_border=true&count_private=true&theme=dark&bg_color=0D1117" />
-  <img height="165" src="https://github-readme-stats.vercel.app/api?username=Chethin&show_icons=true&hide_border=true&count_private=true&theme=transparent" />
-</picture>
 
 <br>
 <br>
