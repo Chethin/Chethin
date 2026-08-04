@@ -6,11 +6,11 @@
 
 <br>
 
-<a href="https://chethin.me"><img src="https://cdn.simpleicons.org/googlechrome/58A6FF" height="30" alt="Website" /></a>
+<a href="https://chethin.me"><img src="https://api.iconify.design/mdi/web.svg?color=%2358a6ff" height="30" alt="Website" /></a>
 &nbsp;&nbsp;
-<a href="https://linkedin.com/in/chethin"><img src="https://cdn.simpleicons.org/linkedin/0A66C2" height="30" alt="LinkedIn" /></a>
+<a href="https://linkedin.com/in/chethin"><img src="https://api.iconify.design/mdi/linkedin.svg?color=%230a66c2" height="30" alt="LinkedIn" /></a>
 &nbsp;&nbsp;
-<a href="mailto:hello@chethin.me"><img src="https://cdn.simpleicons.org/gmail/EA4335" height="30" alt="Email" /></a>
+<a href="mailto:hello@chethin.me"><img src="https://api.iconify.design/mdi/email.svg?color=%23ea4335" height="30" alt="Email" /></a>
 
 </div>
 
