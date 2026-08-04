@@ -1,14 +1,22 @@
 <div align="center">
 
-# Chethin Weerakkody
+<a href="https://chethin.me">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=30&duration=4000&pause=1500&color=58A6FF&center=true&vCenter=true&random=false&width=560&lines=Chethin+Weerakkody" alt="Chethin Weerakkody" width="100%" />
+</a>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=2500&pause=1200&color=8B949E&center=true&vCenter=true&random=false&width=480&lines=Co-founder+%40+PaperSetter;First-Class+Honours+%40+ANU;Compilers+%E2%80%A2+Systems+%E2%80%A2+3D+%E2%80%A2+Performance" alt="tagline" />
+
+<br>
+
+<a href="https://chethin.me"><img src="https://img.shields.io/badge/chethin.me-58A6FF?style=for-the-badge&logo=googlechrome&logoColor=white" alt="website" /></a>
+<a href="https://linkedin.com/in/chethin"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin" /></a>
+<a href="mailto:hello@chethin.me"><img src="https://img.shields.io/badge/hello@chethin.me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="email" /></a>
 
 </div>
 
 ---
 
-- Co-founder @ PaperSetter — end-to-end AI exam engine: automated test generation, pixel-perfect PDF rendering, and real-time exam delivery.
-- First-Class Honours @ ANU (Compilers & Systems).
-- Obsessed with efficiency, performance, and 3D experiences.
+> **Co-founder @ [PaperSetter](https://chethin.me)** — an end-to-end AI exam engine for automated test generation, pixel-perfect PDF rendering, and real-time exam delivery. First-Class Honours @ **ANU** (Compilers & Systems), obsessed with efficiency, raw performance, and 3D experiences.
 
 ---
 
@@ -50,8 +58,9 @@
 <img src="https://skillicons.dev/icons?i=arch,macos,neovim,raspberrypi&perline=8" alt="setup" />
 
 <br>
-<br>
 
-**[`chethin.me`](https://chethin.me)** · **[linkedin](https://linkedin.com/in/chethin)** · **`hello@chethin.me`**
+<a href="https://chethin.me"><img src="https://img.shields.io/badge/chethin.me-58A6FF?style=flat-square&logo=googlechrome&logoColor=white" /></a>
+<a href="https://linkedin.com/in/chethin"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" /></a>
+<a href="mailto:hello@chethin.me"><img src="https://img.shields.io/badge/hello@chethin.me-EA4335?style=flat-square&logo=gmail&logoColor=white" /></a>
 
 </div>
