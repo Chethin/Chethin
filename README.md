@@ -12,7 +12,7 @@
 - 🎓 **First-Class Honours @ ANU** — specialising in Compilers & Systems
 - ⚡ Obsessed with efficiency, raw performance & 3D experiences
 - 🌱 **Learning** — WebGPU, shaders, SwiftUI, Three.js
-- 🛠️ **Building** — a customisable online exam taker
+- 🛠️ **Building** — [New Portfolio](https://chethin.me)** inspired by Bruno Simon
 - 🤝 **Open to** — collaborating on cool ideas we can bootstrap
 - ⌨️ **Fun fact** — I daily-drive a Colemak split keyboard
 
