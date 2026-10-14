@@ -25,16 +25,6 @@
 <br>
 <br>
 
-<a href="https://git.io/streak-stats">
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=Chethin&hide_border=true&background=0D1117&ring=58A6FF&fire=F18537&currStreakLabel=58A6FF&currStreakNum=F0F6FC&sideNums=F0F6FC&sideLabels=C9D1D9&dates=8B949E" />
-  <img alt="github streak" height="170" src="https://streak-stats.demolab.com?user=Chethin&hide_border=true&background=00000000&ring=0969DA&fire=F18537&currStreakLabel=0969DA" />
-</picture>
-</a>
-
-<br>
-<br>
-
 **what I build with**
 
 <img src="https://skillicons.dev/icons?i=ts,react,nextjs,threejs,vite,python,java&perline=8" alt="stack" />
