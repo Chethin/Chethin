@@ -3,42 +3,37 @@
     python3 scripts/header.py
 """
 import base64
+import math
 import os
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 ASSETS = os.path.join(ROOT, 'assets')
 SANS = "-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif"
 MONO = 'ui-monospace,SFMono-Regular,Menlo,Consolas,monospace'
-C = ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353']
-EX, EY = (10.6, 4.0), (-9.0, 6.6)
 
 ROLE = ('Forward Deployed Engineer', 'Lyra')
 SUB = 'Co-founder of PaperSetter  ·  First-Class Honours @ ANU'
 TAGLINE = 'I make software fast, and sometimes 3D.'
 
 
-def mix(a, b, t):
-    a, b = [int(a[i:i + 2], 16) for i in (1, 3, 5)], [int(b[i:i + 2], 16) for i in (1, 3, 5)]
-    return '#' + ''.join(f'{round(p + (q - p) * t):02x}' for p, q in zip(a, b))
+WAVE = 4.0  # seconds per ripple
 
 
-def tower(ox, oy, X, Y, h, l, lit):
-    """A single isometric building in the city's style."""
-    P = lambda x, y, z: (ox + x * EX[0] + y * EY[0], oy + x * EX[1] + y * EY[1] - z)
-    pts = lambda ps: ' '.join(f'{x:.1f},{y:.1f}' for x, y in ps)
-    x0, x1, y0, y1 = X + .12, X + .88, Y + .12, Y + .88
-    out = [f'<polygon fill="{mix(C[l], "#000000", .48)}" points="{pts([P(x1, y0, 0), P(x1, y1, 0), P(x1, y1, h), P(x1, y0, h)])}"/>',
-           f'<polygon fill="{mix(C[l], "#000000", .22)}" points="{pts([P(x0, y1, 0), P(x1, y1, 0), P(x1, y1, h), P(x0, y1, h)])}"/>',
-           f'<polygon fill="{C[l]}" points="{pts([P(x0, y0, h), P(x1, y0, h), P(x1, y1, h), P(x0, y1, h)])}"/>']
-    k = 0
-    for z in range(4, int(h) - 3, 5):
-        for u in (.1, .42):
-            on = lit[k % len(lit)]
-            k += 1
-            fill = 'fill="#ffd866"' if on else 'fill="#c9d1d9" fill-opacity=".13"'
-            out.append(f'<polygon {fill} points="{pts([P(x0 + u, y1, z), P(x0 + u + .24, y1, z), P(x0 + u + .24, y1, z + 2.4), P(x0 + u, y1, z + 2.4)])}"/>')
-            out.append(f'<polygon {fill} points="{pts([P(x1, y0 + u, z), P(x1, y0 + u + .24, z), P(x1, y0 + u + .24, z + 2.4), P(x1, y0 + u, z + 2.4)])}"/>')
-    return ''.join(out), P(X + .5, Y + .5, h)
+def ripple(cx, cy, R=8, sx=10, sy=4.6, lag=.75):
+    """An isometric grid of dots with a ripple spreading out from the centre, like a shader on a point cloud."""
+    out = []
+    for i in range(-R, R + 1):
+        for j in range(-R, R + 1):
+            r = math.hypot(i, j)
+            if r > R:
+                continue
+            x, y = cx + (i - j) * sx, cy + (i + j) * sy
+            depth = (i + j + 2 * R) / (4 * R)  # 0 at the back, 1 at the front
+            fade = (1 - r / (R + .5)) ** .8
+            delay = -(WAVE - (r * lag) % WAVE)
+            out.append(f'<circle class="d" cx="{x:.1f}" cy="{y:.1f}" r="{1.1 + .9 * depth:.2f}" opacity="{fade:.2f}" '
+                       f'style="animation-delay:{delay:.2f}s"/>')
+    return ''.join(out)
 
 
 def header():
@@ -53,15 +48,15 @@ def header():
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">',
          '<style>@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}.pulse{animation:pulse 2.4s ease-in-out infinite}'
          '@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}.cursor{animation:blink 1s step-end infinite}'
-         '@keyframes ant{0%,60%{opacity:1}61%,100%{opacity:.15}}.ant{animation:ant 1.4s infinite}</style>',
+         '@keyframes wave{0%,100%{transform:translateY(-8px);fill-opacity:1}50%{transform:translateY(8px);fill-opacity:.18}}'
+         f'.d{{fill:#39d353;animation:wave {WAVE}s ease-in-out infinite}}</style>',
          '<defs><clipPath id="card"><rect width="720" height="196" rx="10"/></clipPath>'
-         '<radialGradient id="glow" cx=".86" cy=".75" r=".45"><stop offset="0" stop-color="#26a641" stop-opacity=".16"/>'
+         '<radialGradient id="glow" cx=".83" cy=".51" r=".3"><stop offset="0" stop-color="#26a641" stop-opacity=".14"/>'
          '<stop offset="1" stop-color="#26a641" stop-opacity="0"/></radialGradient>'
-         '<pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".8" fill="#e6edf3" fill-opacity=".06"/></pattern>'
          f'<clipPath id="typed"><rect x="40" y="148" height="20" width="0"><animate attributeName="width" values="{widths};{n * cw:.1f};0" '
          f'keyTimes="{times};.94;1" calcMode="discrete" dur="{dur}s" repeatCount="indefinite"/></rect></clipPath></defs>',
          '<g clip-path="url(#card)">',
-         '<rect width="100%" height="100%" fill="#0d1117"/><rect width="100%" height="100%" fill="url(#dots)"/>'
+         '<rect width="100%" height="100%" fill="#0d1117"/>'
          '<rect width="100%" height="100%" fill="url(#glow)"/>']
 
     # name, then role with a live "current" dot, then the muted second line
@@ -82,21 +77,7 @@ def header():
              f'<animate attributeName="x" values="{";".join(f"{40 + min(i, n) * cw:.1f}" for i in range(n + 1))};{40 + n * cw:.1f};40" '
              f'keyTimes="{times};.94;1" calcMode="discrete" dur="{dur}s" repeatCount="indefinite"/></rect>')
 
-    # a small cluster of buildings from the city, bottom right
-    ox, oy = 590, 118
-    s, cx, cy = 1.55, 612, 104  # scale the cluster up around its centre (598, 113)
-    o.append(f'<g transform="matrix({s} 0 0 {s} {cx - s * 598:.2f} {cy - s * 113:.2f})">')
-    o.append(f'<polygon fill="#0b0f14" stroke="#30363d" stroke-width=".8" points="'
-             + ' '.join(f'{ox + x * EX[0] + y * EY[0]:.1f},{oy + x * EX[1] + y * EY[1]:.1f}' for x, y in ((-.3, -.3), (4.3, -.3), (4.3, 3.3), (-.3, 3.3))) + '"/>')
-    spec = [(1, 0, 30, 3, [1, 0, 1, 1]), (3, 0, 18, 2, [0, 1]), (0, 1, 22, 2, [1, 1, 0]), (2, 1, 52, 4, [1, 0, 1, 1, 0, 1]),
-            (3, 1, 12, 1, [0]), (0, 2, 9, 1, [0]), (1, 2, 38, 3, [0, 1, 1, 0, 1]), (3, 2, 26, 3, [1, 0]), (2, 2, 6, 1, [0])]
-    for X, Y, hh, l, lit in sorted(spec, key=lambda s: (s[0] + s[1], s[0])):
-        svg, top = tower(ox, oy, X, Y, hh, l, lit)
-        o.append(svg)
-        if hh == 52:
-            o.append(f'<line x1="{top[0]:.1f}" y1="{top[1]:.1f}" x2="{top[0]:.1f}" y2="{top[1] - 9:.1f}" stroke="#8b949e" stroke-width=".8"/>'
-                     f'<circle class="ant" cx="{top[0]:.1f}" cy="{top[1] - 9.5:.1f}" r="1.5" fill="#ff5c5c"/>')
-    o.append('</g>')
+    o.append(ripple(cx=600, cy=100))
 
     o.append('</g><rect x=".5" y=".5" width="719" height="195" rx="9.5" fill="none" stroke="#30363d"/></svg>')
     with open(os.path.join(ASSETS, 'header.svg'), 'w') as f:
