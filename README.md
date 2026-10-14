@@ -20,10 +20,7 @@
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Chethin/Chethin/output/github-snake-dark.svg" />
-  <img alt="github contribution snake" width="100%" src="https://raw.githubusercontent.com/Chethin/Chethin/output/github-snake.svg" />
-</picture>
+<img alt="contribution city" width="100%" src="https://raw.githubusercontent.com/Chethin/Chethin/output/city.svg" />
 
 <br>
 <br>
