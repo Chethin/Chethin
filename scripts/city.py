@@ -310,7 +310,7 @@ def render(cells, total, tz):
     now = dt.datetime.now(ZoneInfo(tz))
     o.append(f'<text x="24" y="356" class="stamp">Updated {now:%-d %b %Y}, {now:%-I:%M} {now:%p}'.replace('AM', 'am').replace('PM', 'pm')
              + f' {now:%Z}</text>')
-    o.append('</g>')
+    o.append('</g><rect x=".5" y=".5" width="719" height="371" rx="9.5" fill="none" stroke="#30363d"/>')
     return ('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 372" width="720" height="372" '
             'font-family="ui-monospace,SFMono-Regular,Menlo,monospace">' + ''.join(o) + '</svg>')
 

@@ -1,20 +1,10 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/name.png" />
-  <img src="assets/name-light.png" width="634" height="70" alt="Chethin Weerakkody" />
-</picture>
+<img alt="Chethin Weerakkody — Forward Deployed Engineer @ Lyra · Co-founder of PaperSetter · First-Class Honours @ ANU" width="100%" src="assets/header.svg" />
 
-<br>
-<br>
-
-**Forward Deployed Engineer @ Lyra** · Co-founder of [PaperSetter](https://papersetter.io)
-
-Compilers & systems, First-Class Honours @ ANU
-
-I make software fast, and sometimes 3D.
-
-[chethin.me](https://chethin.me) · [LinkedIn](https://linkedin.com/in/chethin) · [Email](mailto:hello@chethin.me)
+<a href="https://chethin.me"><img alt="chethin.me" height="34" src="assets/link-web.svg" /></a>
+<a href="https://linkedin.com/in/chethin"><img alt="LinkedIn" height="34" src="assets/link-linkedin.svg" /></a>
+<a href="mailto:hello@chethin.me"><img alt="Email" height="34" src="assets/link-email.svg" /></a>
 
 <br>
 
