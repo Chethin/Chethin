@@ -3,7 +3,7 @@
     python3 scripts/header.py
 """
 import base64
-import math
+import json
 import os
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
@@ -16,24 +16,28 @@ SUB = 'Co-founder of PaperSetter  ·  First-Class Honours @ ANU'
 TAGLINE = 'I make software fast, and sometimes 3D.'
 
 
-WAVE = 4.0  # seconds per ripple
+GREENS = ('#0e4429', '#006d32', '#26a641', '#39d353', '#7ee787')  # GitHub's contribution greens and a highlight
+TONES = 8  # dot sizes
 
 
-def ripple(cx, cy, R=8, sx=10, sy=4.6, lag=.75):
-    """An isometric grid of dots with a ripple spreading out from the centre, like a shader on a point cloud."""
-    out = []
-    for i in range(-R, R + 1):
-        for j in range(-R, R + 1):
-            r = math.hypot(i, j)
-            if r > R:
-                continue
-            x, y = cx + (i - j) * sx, cy + (i + j) * sy
-            depth = (i + j + 2 * R) / (4 * R)  # 0 at the back, 1 at the front
-            fade = (1 - r / (R + .5)) ** .8
-            delay = -(WAVE - (r * lag) % WAVE)
-            out.append(f'<circle class="d" cx="{x:.1f}" cy="{y:.1f}" r="{1.1 + .9 * depth:.2f}" opacity="{fade:.2f}" '
-                       f'style="animation-delay:{delay:.2f}s"/>')
-    return ''.join(out)
+def face(cx, cy, height):
+    """My face as a halftone (assets/face.json, from face.py), fading out at the neck."""
+    f = json.load(open(os.path.join(ASSETS, 'face.json')))
+    s = height / f['h']
+    x0, y0 = cx - f['w'] * s / 2, cy - height / 2
+    tones = [[] for _ in range(TONES)]
+    for x, y, b in f['points']:
+        tones[min(int(b * TONES), TONES - 1)].append(f'M{x0 + x * s:.1f} {y0 + y * s:.1f}h0')
+
+    o = ['<defs><linearGradient id="neckfade" x1="0" y1="0" x2="0" y2="1"><stop offset=".86" stop-color="#fff"/>'
+         '<stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>'
+         f'<mask id="neck" maskUnits="userSpaceOnUse"><rect x="{x0:.1f}" y="{y0:.1f}" width="{f["w"] * s:.1f}" height="{height}" fill="url(#neckfade)"/></mask></defs>'
+         '<g mask="url(#neck)" fill="none" stroke-linecap="round">']
+    # brighter dots are bigger (area follows brightness) and climb through the contribution greens
+    for t, d in enumerate(tones):
+        o.append(f'<path stroke="{GREENS[t * len(GREENS) // TONES]}" stroke-width="{s * .9 * ((t + .5) / TONES) ** .5:.2f}" d="{"".join(d)}"/>')
+    o.append('</g>')
+    return ''.join(o)
 
 
 def header():
@@ -47,11 +51,9 @@ def header():
 
     o = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="{w}" height="{h}">',
          '<style>@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}.pulse{animation:pulse 2.4s ease-in-out infinite}'
-         '@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}.cursor{animation:blink 1s step-end infinite}'
-         '@keyframes wave{0%,100%{transform:translateY(-8px);fill-opacity:1}50%{transform:translateY(8px);fill-opacity:.18}}'
-         f'.d{{fill:#39d353;animation:wave {WAVE}s ease-in-out infinite}}</style>',
+         '@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}.cursor{animation:blink 1s step-end infinite}</style>',
          '<defs><clipPath id="card"><rect width="720" height="196" rx="10"/></clipPath>'
-         '<radialGradient id="glow" cx=".83" cy=".51" r=".3"><stop offset="0" stop-color="#26a641" stop-opacity=".14"/>'
+         '<radialGradient id="glow" gradientUnits="userSpaceOnUse" cx="600" cy="98" r="110"><stop offset="0" stop-color="#26a641" stop-opacity=".14"/>'
          '<stop offset="1" stop-color="#26a641" stop-opacity="0"/></radialGradient>'
          f'<clipPath id="typed"><rect x="40" y="148" height="20" width="0"><animate attributeName="width" values="{widths};{n * cw:.1f};0" '
          f'keyTimes="{times};.94;1" calcMode="discrete" dur="{dur}s" repeatCount="indefinite"/></rect></clipPath></defs>',
@@ -77,9 +79,9 @@ def header():
              f'<animate attributeName="x" values="{";".join(f"{40 + min(i, n) * cw:.1f}" for i in range(n + 1))};{40 + n * cw:.1f};40" '
              f'keyTimes="{times};.94;1" calcMode="discrete" dur="{dur}s" repeatCount="indefinite"/></rect>')
 
-    o.append(ripple(cx=600, cy=100))
+    o.append(face(cx=600, cy=98, height=176))
 
-    o.append('</g><rect x=".5" y=".5" width="719" height="195" rx="9.5" fill="none" stroke="#30363d"/></svg>')
+    o.append('</g></svg>')
     with open(os.path.join(ASSETS, 'header.svg'), 'w') as f:
         f.write(''.join(o))
 
@@ -95,7 +97,7 @@ def pill(key, label):
     cw = 7.8  # monospace advance at 13px
     w = round(14 + 16 + 9 + len(label) * cw + 16)
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} 34" width="{w}" height="34">'
-           f'<rect x=".5" y=".5" width="{w - 1}" height="33" rx="16.5" fill="#0d1117" stroke="#30363d"/>'
+           f'<rect width="{w}" height="34" rx="17" fill="#161b22"/>'
            f'<g transform="translate(14 9) scale(.6667)" fill="none" stroke="#7ee787" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">{ICONS[key]}</g>'
            f'<text x="39" y="21.5" fill="#e6edf3" font-family="{MONO}" font-size="13" '
            f'textLength="{len(label) * cw:.1f}" lengthAdjust="spacingAndGlyphs">{label}</text></svg>')
