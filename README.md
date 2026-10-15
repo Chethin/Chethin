@@ -10,14 +10,4 @@
 
 <img alt="contribution city" width="100%" src="https://raw.githubusercontent.com/Chethin/Chethin/output/city.svg" />
 
-<br>
-<br>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=ts,react,nextjs,threejs,vite,python,java&theme=dark" />
-  <img alt="TypeScript, React, Next.js, Three.js, Vite, Python, Java" src="https://skillicons.dev/icons?i=ts,react,nextjs,threejs,vite,python,java&theme=light" />
-</picture>
-
-<sub>Arch + Neovim on a Colemak split.</sub>
-
 </div>
